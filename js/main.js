@@ -64,6 +64,7 @@ console.log(percentComplete)
     '</div>' +
   '</div>';
   $("#tasksBlock").append(sectionHtml);
+  $("#tasksBlock2").append(sectionHtml);
 
 
 
@@ -107,6 +108,8 @@ console.log(percentComplete)
 }
 
 settings.tasks.forEach(listTasks);
+
+settings.tasks2.forEach(listTasks);
 
 
 
