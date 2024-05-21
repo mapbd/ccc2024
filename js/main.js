@@ -64,7 +64,20 @@ console.log(percentComplete)
     '</div>' +
   '</div>';
   $("#tasksBlock").append(sectionHtml);
-  $("#tasksBlock2").append(sectionHtml);
+
+
+    var sectionHtml = '<div class="row row-task"' + ' id="row' + project_id + '"' + '>' +
+    '<div class="col-md-6">' +
+      '<div class="">' +
+        '<h4>Task #' + project_id + '</h4>' +
+        // '<p>' + ' ' + percentComplete + '% ' + 'complete'+ '</p>' +
+      '</div>' +
+   '</div>' +
+    '<div class="col-md-6">' +
+      '<div class="map"' + ' id="map' + project_id + '"' + '></div>' +
+    '</div>' +
+  '</div>';
+  $("#tasksBlock").append(sectionHtml);
 
 
 
