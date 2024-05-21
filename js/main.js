@@ -23,6 +23,8 @@ var removedStyle = {
 //https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/11353/tasks/tasks/?as_file=true
 //https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/11353/statistics/
 
+//https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/16799/queries/summary/
+
 function listTasks(element, index, array) {
   var project_id = element;
   d3.json("https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/" + project_id + "/tasks/?as_file=true", function(object){
@@ -53,20 +55,6 @@ var percentComplete = Math.round((countof2/countTotal)*100);
 console.log(percentComplete)
 
   var sectionHtml = '<div class="row row-task"' + ' id="row' + project_id + '"' + '>' +
-    '<div class="col-md-6">' +
-      '<div class="">' +
-        '<h4>Task #' + project_id + '</h4>' +
-        // '<p>' + ' ' + percentComplete + '% ' + 'complete'+ '</p>' +
-      '</div>' +
-   '</div>' +
-    '<div class="col-md-6">' +
-      '<div class="map"' + ' id="map' + project_id + '"' + '></div>' +
-    '</div>' +
-  '</div>';
-  $("#tasksBlock").append(sectionHtml);
-
-
-    var sectionHtml = '<div class="row row-task"' + ' id="row' + project_id + '"' + '>' +
     '<div class="col-md-6">' +
       '<div class="">' +
         '<h4>Task #' + project_id + '</h4>' +
@@ -122,7 +110,6 @@ console.log(percentComplete)
 
 settings.tasks.forEach(listTasks);
 
-settings.tasks2.forEach(listTasks);
 
 
 
